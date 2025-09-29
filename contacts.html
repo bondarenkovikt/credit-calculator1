@@ -1,0 +1,71 @@
+<!-- Сайт розроблено студенткою Бондаренко Вікторія Олексіївна, група ФЕМП 5-3з -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Контакти</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Контакти</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="about.html">Про сайт</a></li>
+        <li><a href="contacts.html" class="active">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Зв’яжіться зі мною</h2>
+    <p>Заповніть форму нижче, і ваше повідомлення буде «відправлене» 😊</p>
+
+    <form id="contactForm">
+      <label>Ваше ім’я:
+        <input type="text" name="name" required>
+      </label>
+      <label>Email:
+        <input type="email" name="email" required>
+      </label>
+      <label>Повідомлення:
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button type="submit">Надіслати</button>
+    </form>
+
+    <div id="formMessage" class="hidden"></div>
+
+    <h3>Інші контакти</h3>
+    <ul>
+      <li>Email: <a href="mailto:viktoria.bondarenko@example.com">viktoria.bondarenko@gmail.com</a></li>
+      <li>Телефон: +380 67 123 45 67</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2025 Бондаренко Вікторія Олексіївна, група ФЕМП 5-3з</p>
+  </footer>
+
+  <script>
+    // Ефект відправлення форми
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      document.getElementById("formMessage").textContent = "✅ Ваше повідомлення успішно надіслано!";
+      document.getElementById("formMessage").classList.remove("hidden");
+      document.getElementById("formMessage").classList.add("show");
+
+      // Очистимо форму
+      this.reset();
+
+      // Автоматичне зникнення повідомлення
+      setTimeout(() => {
+        document.getElementById("formMessage").classList.remove("show");
+        document.getElementById("formMessage").classList.add("hidden");
+      }, 4000);
+    });
+  </script>
+</body>
+</html>

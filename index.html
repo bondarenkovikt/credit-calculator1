@@ -1,0 +1,47 @@
+<!-- Сайт розроблено студенткою Бондаренко Вікторія Олексіївна, група ФЕМП 5-3з -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Кредитний калькулятор</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Кредитний калькулятор</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Головна</a></li>
+        <li><a href="about.html">Про сайт</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="calculator-card">
+      <h2>Розрахунок щомісячного платежу</h2>
+      <form id="creditForm">
+        <label>Сума кредиту (грн):
+          <input type="number" id="amount" required>
+        </label>
+        <label>Термін (місяців):
+          <input type="number" id="months" required>
+        </label>
+        <label>Річна ставка (%):
+          <input type="number" id="rate" required>
+        </label>
+        <button type="submit">Розрахувати</button>
+      </form>
+
+      <div id="result" class="hidden"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Бондаренко Вікторія Олексіївна, група ФЕМП 5-3з</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
